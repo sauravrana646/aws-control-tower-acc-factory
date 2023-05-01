@@ -87,14 +87,14 @@ resource "aws_iam_role" "s3_role" {
 }
 
 
-provider "aws" {
-  alias = "member"
-  region = "us-east-1"
-  profile = "dumdum"
-  assume_role {
-    role_arn = "arn:aws:iam::854611383816:role/OrganizationAccountAccessRole"
-  }
-}
+# provider "aws" {
+#   alias = "member"
+#   region = "us-east-1"
+#   profile = "dumdum"
+#   assume_role {
+#     role_arn = "arn:aws:iam::854611383816:role/OrganizationAccountAccessRole"
+#   }
+# }
 
 # resource "aws_s3_bucket" "example_bucket" {
 
@@ -105,8 +105,8 @@ provider "aws" {
 #   }
 # }
 
-resource "aws_vpc" "main" {
-  provider = aws.member
-  cidr_block = "10.100.0.0/16"
-}
+# resource "aws_vpc" "main" {
+#   provider = aws.member
+#   cidr_block = "10.100.0.0/16"
+# }
   
